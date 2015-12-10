@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>酷ラジ ～kokuradi～</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script>
+        var ua = {};
+        ua.name = window.navigator.userAgent.toLowerCase();
+        
+        ua.isIE = (ua.name.indexOf('msie') >= 0 || ua.name.indexOf('trident') >= 0);
+        ua.isiPhone = ua.name.indexOf('iphone') >= 0;
+        ua.isiPod = ua.name.indexOf('ipod') >= 0;
+        ua.isiPad = ua.name.indexOf('ipad') >= 0;
+        ua.isiOS = (ua.isiPhone || ua.isiPod || ua.isiPad);
+            
+        $(function(){
+            if ( ua.isiOS ){
+                $(".ios").show();
+            } else {
+                $(".ios").hide();
+            }
+        });
+    </script>
+    
+  </head>
+  <body>
+    
+
+    
+    
+    <div class="container" style="max-width:800px">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>酷道ラジオ～kokuradi～</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="flexible">
+                    <iframe width="640" height="360" src="https://www.youtube.com/embed/Rsmo5hq9bKg" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="ios" style="display:none;">
+                    ※ iOSをご利用の方は生放送を閲覧しながらチャットをすることができません。
+                </div>
+                <div class="flexible">
+                    <iframe src="http://chat.kanichat.com/chat?roomid=kokuradi" width="640" height="600" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+    
+    
+    <footer class="footer">
+        <div class="container text-muted">
+            <div class="footer-author">Copyright © 2015 kokuradi. </div>
+            <div class="footer-author">Copyright © 2015 mitsugogo. <a href="https://twitter.com/mitsugogo" title="" class="auto-tooltip" data-original-title="Twitter: mitsugogo"><span class="fa fa-twitter"></span></a> <a href="https://github.com/mitsugogo" title="" class="auto-tooltip" data-original-title="GitHub: mitsugogo"><span class="fa fa-github"></span></a><br></div>
+            <div class="footer-message">バグや提案などありましたらTwitterでご連絡ください。</div>
+            <div class="footer-powerdby">Powered by <a href="http://getbootstrap.com/" target="_blank">Bootstrap 3</a>, <a href="http://www.kanichat.com/" target="_blank">かにチャット</a></div>
+        </div>
+    </footer>
+    
+  </body>
+</html>
